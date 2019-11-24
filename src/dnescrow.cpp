@@ -12,7 +12,7 @@ void dnescrow::init(vector<char> uri,
 
   payment newdata = currentdata.get();
 
-  check(newdata.quantity > asset(0, newdata.quantity.symbol), "empty deposit");
+  check(newdata.quantity > asset(0, symbol("EOS", 4)), "empty deposit");
   
   require_auth(newdata.creator);
  
@@ -48,7 +48,11 @@ void dnescrow::transfer(name    from,
   
   check(newdata.active == false, "already processing");
 
-  newdata.creator = from;  
+  newdata.creator = from;
+  
+  if (newdata.quantity.amount == 0) {
+    newdata.quantity = asset(0, symbol("EOS", 4));
+  }
   newdata.quantity += quantity;
   
   currentdata.set(newdata, get_self());
@@ -91,7 +95,7 @@ bool dnescrow::timer_callback(name timer,
     ).send();
   }
   
-  newdata.quantity = asset(0, newdata.quantity.symbol);
+  newdata.quantity = asset(0, symbol("EOS", 4));
   newdata.active = false;
 
   currentdata.set(newdata, _self);
