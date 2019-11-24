@@ -1,7 +1,6 @@
 #include <eosio/eosio.hpp>
 #include <eosio/asset.hpp>
 #include <eosio/transaction.hpp>
-#include <eosio.token.hpp>
 
 #include "dappservices/oracle.hpp"
 #include "dappservices/cron.hpp"
