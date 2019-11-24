@@ -1,0 +1,1 @@
+/usr/bin/eosio-ld  CMakeFiles/dappservices.dir/dappservices.cpp.obj -o dappservices.wasm 

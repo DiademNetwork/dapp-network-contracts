@@ -1,0 +1,3 @@
+/workspace/zeus-ide/dapp/contracts/eos/dappservices/CMakeFiles/rebuild_cache.dir
+/workspace/zeus-ide/dapp/contracts/eos/dappservices/CMakeFiles/dappservices.dir
+/workspace/zeus-ide/dapp/contracts/eos/dappservices/CMakeFiles/edit_cache.dir

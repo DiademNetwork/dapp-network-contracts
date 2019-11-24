@@ -1,0 +1,288 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT ",
+    "version": "eosio::abi/1.1",
+    "types": [],
+    "structs": [
+        {
+            "name": "init",
+            "base": "",
+            "fields": [
+                {
+                    "name": "uri",
+                    "type": "bytes"
+                },
+                {
+                    "name": "expected",
+                    "type": "bytes"
+                },
+                {
+                    "name": "beneficiary",
+                    "type": "name"
+                },
+                {
+                    "name": "delay_sec",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "oracleentry",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "uri",
+                    "type": "bytes"
+                },
+                {
+                    "name": "results",
+                    "type": "provider_result[]"
+                }
+            ]
+        },
+        {
+            "name": "payment",
+            "base": "",
+            "fields": [
+                {
+                    "name": "creator",
+                    "type": "name"
+                },
+                {
+                    "name": "beneficiary",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                },
+                {
+                    "name": "delay_sec",
+                    "type": "uint64"
+                },
+                {
+                    "name": "uri",
+                    "type": "bytes"
+                },
+                {
+                    "name": "expected",
+                    "type": "bytes"
+                },
+                {
+                    "name": "active",
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "name": "provider_result",
+            "base": "",
+            "fields": [
+                {
+                    "name": "result",
+                    "type": "bytes"
+                },
+                {
+                    "name": "provider",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "timerentry",
+            "base": "",
+            "fields": [
+                {
+                    "name": "set_timestamp",
+                    "type": "int64"
+                },
+                {
+                    "name": "fired_timestamp",
+                    "type": "int64"
+                }
+            ]
+        },
+        {
+            "name": "transfer",
+            "base": "",
+            "fields": [
+                {
+                    "name": "from",
+                    "type": "name"
+                },
+                {
+                    "name": "to",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "xgeturi",
+            "base": "",
+            "fields": [
+                {
+                    "name": "current_provider",
+                    "type": "name"
+                },
+                {
+                    "name": "package",
+                    "type": "name"
+                },
+                {
+                    "name": "size",
+                    "type": "uint32"
+                },
+                {
+                    "name": "uri",
+                    "type": "bytes"
+                },
+                {
+                    "name": "data",
+                    "type": "bytes"
+                }
+            ]
+        },
+        {
+            "name": "xorcclean",
+            "base": "",
+            "fields": [
+                {
+                    "name": "current_provider",
+                    "type": "name"
+                },
+                {
+                    "name": "package",
+                    "type": "name"
+                },
+                {
+                    "name": "size",
+                    "type": "uint32"
+                },
+                {
+                    "name": "uri",
+                    "type": "bytes"
+                }
+            ]
+        },
+        {
+            "name": "xschedule",
+            "base": "",
+            "fields": [
+                {
+                    "name": "current_provider",
+                    "type": "name"
+                },
+                {
+                    "name": "package",
+                    "type": "name"
+                },
+                {
+                    "name": "timer",
+                    "type": "name"
+                },
+                {
+                    "name": "payload",
+                    "type": "bytes"
+                },
+                {
+                    "name": "seconds",
+                    "type": "uint32"
+                }
+            ]
+        },
+        {
+            "name": "xsignal",
+            "base": "",
+            "fields": [
+                {
+                    "name": "service",
+                    "type": "name"
+                },
+                {
+                    "name": "action",
+                    "type": "name"
+                },
+                {
+                    "name": "provider",
+                    "type": "name"
+                },
+                {
+                    "name": "package",
+                    "type": "name"
+                },
+                {
+                    "name": "signalRawData",
+                    "type": "bytes"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "init",
+            "type": "init",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "transfer",
+            "type": "transfer",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "xgeturi",
+            "type": "xgeturi",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "xorcclean",
+            "type": "xorcclean",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "xschedule",
+            "type": "xschedule",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "xsignal",
+            "type": "xsignal",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "oracleentry",
+            "type": "oracleentry",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "payment",
+            "type": "payment",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "timerentry",
+            "type": "timerentry",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "ricardian_clauses": [],
+    "variants": []
+}
